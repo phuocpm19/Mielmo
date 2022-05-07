@@ -1,0 +1,121 @@
+@import "../global/mixins";
+
+.Flow {
+  background-image: url("../images/flow_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px 4% 128px;
+  position: relative;
+
+  @include for-phones {
+    padding: 46px 4%;
+  }
+
+  &__sub-heading {
+    color: #15b1c8;
+  }
+
+  &__list {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  &__item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px 40px;
+
+    @include for-phones {
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    &-main {
+      align-items: flex-start;
+      display: flex;
+      justify-content: space-between;
+
+      @include for-phones {
+        display: block;
+      }
+    }
+
+    &-left {
+      font-weight: 700;
+      margin-right: 40px;
+      max-width: 140px;
+      text-align: center;
+      width: 100%;
+
+      @include for-phones {
+        margin: auto;
+      }
+
+      &-title {
+        color: #fc641d;
+
+        span {
+          font-size: 3.2rem;
+
+          @include for-phones {
+            font-size: 2.2rem;
+          }
+        }
+      }
+
+      &-sub-title {
+        color: #09c;
+        font-size: 2rem;
+        line-height: 1.3;
+        margin-bottom: 0.5em;
+
+        @include for-phones {
+          font-size: 1.6rem;
+        }
+      }
+
+      &-icon {
+        width: 51px;
+        margin: auto;
+      }
+    }
+
+    &-right {
+      margin: 1em 0;
+
+      &-text {
+        line-height: 2;
+      }
+    }
+
+    .Banner {
+      padding: 0;
+    }
+
+    .Cta__body-link {
+      max-width: 220px;
+      margin: auto;
+    }
+  }
+
+  &__sub-item {
+    display: block;
+    margin: 10px auto;
+    width: 36px;
+  }
+
+  &__illus {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    margin: auto;
+    max-width: 222px;
+    width: 100%;
+
+    @include for-phones {
+      display: none;
+    }
+  }
+}

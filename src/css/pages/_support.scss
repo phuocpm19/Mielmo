@@ -1,0 +1,30 @@
+@import "../global/mixins";
+
+.Support {
+  background: #fafafa;
+  font-size: 2.2rem;
+  padding: 64px 4%;
+  text-align: center;
+
+  @include for-phones {
+    font-size: 1.8rem;
+    padding: 46px 4%;
+    text-align: left;
+  }
+
+  &__sub-heading {
+    color: #15b1c8;
+  }
+
+  &__info {
+    &-text {
+      font-weight: 700;
+    }
+  }
+
+  &__img {
+    margin: 2em auto 0 auto;
+    max-width: 760px;
+    width: 100%;
+  }
+}

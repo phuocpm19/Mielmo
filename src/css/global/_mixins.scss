@@ -1,0 +1,7 @@
+$sm: 720px;
+
+@mixin for-phones {
+  @media screen and (max-width: $sm) {
+    @content;
+  }
+}

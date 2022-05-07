@@ -1,0 +1,110 @@
+@import "../global/mixins";
+
+.Reason {
+  background-image: url("../images/reason_bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 64px 4%;
+
+  @include for-phones {
+    padding: 46px 4%;
+  }
+
+  &__heading {
+    color: #fff;
+
+    span {
+      @include for-phones {
+        display: block;
+      }
+    }
+  }
+
+  &__sub-heading {
+    color: #fff;
+  }
+
+  &__list {
+    margin: auto;
+    max-width: 920px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 15px;
+    margin-top: 2em;
+    padding: 40px 40px 0;
+
+    @include for-phones {
+      display: block;
+      border-radius: 10px;
+      margin-top: 1em;
+      padding: 20px 20px 0;
+    }
+
+    &-info {
+      margin-bottom: 2em;
+      max-width: 420px;
+
+      &-title {
+        color: #09c;
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 0.5em;
+
+        span {
+          display: inline-block;
+        }
+
+        &-entity {
+          font-size: 0.5em;
+          vertical-align: top;
+        }
+      }
+
+      &-text {
+        line-height: 2;
+      }
+    }
+
+    &-thumb {
+      width: 100%;
+      vertical-align: bottom;
+
+      @include for-phones {
+        margin: 1em auto 0;
+      }
+
+      &.thumb-01 {
+        max-width: 363px;
+      }
+
+      &.thumb-02 {
+        max-width: 384px;
+      }
+
+      &.thumb-03 {
+        max-width: 381px;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    text-align: right;
+
+    @include for-phones {
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    span {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+@import "./mixins";
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #fff;
+  color: #141414;
+  font: 1.4em "Arial", "Noto Sans JP", "ãƒ’ãƒ©ã‚®ãƒŽè§’ã‚´ ProN", "Hiragino Kaku Gothic ProN", "ãƒ¡ã‚¤ãƒªã‚ª", Meiryo,
+    "ï¼­ï¼³ ï¼°ã‚´ã‚·ãƒƒã‚¯", "MS PGothic", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+}
+.wrap {
+  margin: auto;
+  width: 100%;
+}
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* list */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* link */
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #fff;
+  text-decoration: none;
+}
+a img:hover {
+  filter: alpha(opacity=70);
+  -webkit-transition: 0.3s;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+// -------
+
+.active-pc {
+  display: block;
+
+  @include for-phones {
+    display: none;
+  }
+}
+
+.active-mb {
+  display: none;
+
+  @include for-phones {
+    display: block;
+  }
+}
+
+.text-highlight {
+  background: linear-gradient(transparent 70%, #fadf4f 0%);
+  color: #fc641d;
+}
+
+.header-common {
+  margin-bottom: 2em;
+  text-align: center;
+
+  &__heading {
+    font-size: 3.2rem;
+    letter-spacing: 0.2em;
+    line-height: 1.3;
+    font-weight: 700;
+
+    @include for-phones {
+      font-size: 2.6rem;
+    }
+  }
+
+  &__sub-heading {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    margin-top: 0.5em;
+    font-weight: 700;
+
+    @include for-phones {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.Cta {
+  max-width: 440px;
+  width: 100%;
+
+  &__header {
+    color: #ff8f00;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+
+    @include for-phones {
+      font-size: 1.6rem;
+    }
+
+    span {
+      font-size: 2.6rem;
+      font-weight: 700;
+
+      @include for-phones {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__body {
+    &-link {
+      display: block;
+      max-width: 440px;
+      width: 100%;
+    }
+  }
+
+  &__footer {
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    text-align: center;
+
+    @include for-phones {
+      font-size: 1rem;
+    }
+  }
+}
+
+.Banner {
+  background: #fff;
+  padding: 46px 4%;
+
+  @include for-phones {
+    padding: 32px 2%;
+  }
+
+  &__header {
+    margin-bottom: 2em;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    font-weight: 700;
+
+    @include for-phones {
+      font-size: 1.8rem;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__sub-heading {
+    font-size: 3.2rem;
+    letter-spacing: 0.1em;
+    line-height: 1.3;
+    font-weight: 700;
+    color: #fc641d;
+
+    @include for-phones {
+      font-size: 1.8rem;
+      letter-spacing: 0em;
+    }
+  }
+
+  &__body {
+    .Cta {
+      margin: auto;
+    }
+  }
+}

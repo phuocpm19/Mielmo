@@ -1,0 +1,109 @@
+@import "../global/mixins";
+
+.Review {
+  background: linear-gradient(to right, #15b1c8, #adf2cc);
+  padding: 64px 4%;
+
+  @include for-phones {
+    padding: 46px 1%;
+  }
+
+  &__heading {
+    color: #fff;
+  }
+
+  &__sub-heading {
+    color: #fff;
+  }
+
+  &__body {
+    .slider {
+      display: flex;
+      max-width: 1000px;
+      margin: auto;
+
+      &__item {
+        display: flex;
+        background: #fff;
+        border-radius: 15px;
+        padding: 30px 40px;
+
+        @include for-phones {
+          display: block;
+          border-radius: 10px;
+          padding: 20px;
+        }
+
+        &-left {
+          margin-right: 40px;
+          max-width: 160px;
+          text-align: center;
+          width: 100%;
+
+          @include for-phones {
+            margin: 0 auto 1em;
+          }
+
+          &-title {
+            color: #15b1c8;
+
+            span {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+          }
+        }
+        &-right {
+          &-info-list {
+            margin-bottom: 1em;
+          }
+
+          &-info-item {
+            display: flex;
+            font-size: 1.6rem;
+            font-weight: 700;
+            padding-bottom: 0.1em;
+            text-align: left;
+
+            &-left {
+              max-width: 6em;
+              width: 100%;
+              color: #15b1c8;
+            }
+          }
+        }
+      }
+    }
+
+    .slick-dotted.slick-slider {
+      margin-bottom: 30px;
+    }
+
+    .allow {
+      cursor: pointer;
+      margin: 20% 40px;
+      width: 80px;
+      height: 80px;
+
+      @include for-phones {
+        margin: 40% 2px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__footer {
+    .Banner {
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .Cta {
+      &__header,
+      &__footer {
+        color: #fff;
+      }
+    }
+  }
+}
